@@ -37,6 +37,7 @@ public class AnimationRunnable extends BukkitRunnable {
 
         scoreBoard.clear();
 
+
         for(int j = 0; j < lines.size(); j++) {
             //scoreBoard.removeLine(j);
             scoreBoard.setLine(j, rotateString(lines.get(j), lines.get(j).length()/steps));
