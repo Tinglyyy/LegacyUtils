@@ -1,0 +1,7 @@
+name: legacyutils
+version: '${project.version}'
+main: de.unverwunderbar.legacy.legacyutils.Legacyutils
+load: STARTUP
+
+depend:
+  - ProtocolLib
