@@ -15,7 +15,7 @@ public class AnimatedScoreBoard extends UScoreBoard{
     }
 
     public void animate(int steps) {
-        new AnimationRunnable(this, steps).startAsync();
+        new ScoreboardAnimationRunnable(this, steps).startAsync();
     }
 
 

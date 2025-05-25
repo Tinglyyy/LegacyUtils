@@ -1,4 +1,4 @@
-package de.unverwunderbar.legacy.legacyutils.message.impl;
+package de.unverwunderbar.legacy.legacyutils.message.impl.actionbar;
 
 import com.comphenix.protocol.PacketType;
 import com.comphenix.protocol.ProtocolLibrary;

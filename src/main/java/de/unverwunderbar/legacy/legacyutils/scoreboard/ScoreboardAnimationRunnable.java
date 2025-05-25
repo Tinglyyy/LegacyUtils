@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
-public class AnimationRunnable extends BukkitRunnable {
+public class ScoreboardAnimationRunnable extends BukkitRunnable {
 
     private final AnimatedScoreBoard scoreBoard;
 
@@ -16,7 +16,7 @@ public class AnimationRunnable extends BukkitRunnable {
 
     private final AtomicInteger i = new AtomicInteger(0);
 
-    public AnimationRunnable(AnimatedScoreBoard scoreBoard, int steps) {
+    public ScoreboardAnimationRunnable(AnimatedScoreBoard scoreBoard, int steps) {
 
         this.scoreBoard = scoreBoard;
         this.steps = steps > 0 ? steps : 1;
@@ -39,7 +39,6 @@ public class AnimationRunnable extends BukkitRunnable {
 
 
         for(int j = 0; j < lines.size(); j++) {
-            //scoreBoard.removeLine(j);
             scoreBoard.setLine(j, rotateString(lines.get(j), lines.get(j).length()/steps));
 
         }
@@ -49,8 +48,6 @@ public class AnimationRunnable extends BukkitRunnable {
         int current = i.incrementAndGet();
 
         if(current > steps) {
-//            scoreBoard.clear();
-//            scoreBoard.setLines(scoreBoard.getOriginal());
 
             this.cancel();
         }
